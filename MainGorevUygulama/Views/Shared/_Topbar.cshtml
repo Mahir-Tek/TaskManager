@@ -1,0 +1,79 @@
+﻿@using System.Security.Claims
+@{
+    var userName = User.Identity!.Name;
+    var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+    var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+    var userSurname = User.FindFirst(ClaimTypes.Surname)?.Value;
+
+
+}
+<!-- Navbar Header -->
+<nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+    <div class="container-fluid">
+        @{
+            var title = ViewContext.RouteData.Values["controller"]!.ToString();
+            if (title == "Task")
+            {
+                title = "Missions";
+            }
+            else
+            {
+                title = "Profile";
+            }
+        }
+        <div class="my-header">
+            <h5>@title</h5>
+        </div>
+        <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+
+          
+
+
+            <li class="nav-item topbar-user dropdown hidden-caret">
+                <a class="dropdown-toggle profile-pic"
+                   data-bs-toggle="dropdown"
+                   href="#"
+                   aria-expanded="false">
+
+                    <div class="avatar-sm">
+                        <img src="~/images/hiz_profile.jpg"
+                             alt="Avatar"
+                             class="avatar-img rounded-circle" />
+                    </div>
+                    <span class="profile-username">
+                        <span class="op-7">Hello,</span>
+                        <span class="fw-bold">@userName</span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <li>
+                        <div class="dropdown-user-scroll scrollbar-outer">
+                            <div class="user-box">
+                                <div class="avatar-sm">
+                        <img src="~/images/hiz_profile.jpg"
+                             alt="Avatar"
+                             class="avatar-img rounded-circle" />
+                    </div>
+                                <div class="u-text">
+                                    <h4>@userName @userSurname </h4>
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();"<i class="logout-icon"/>
+                            Logout
+                        </a>
+
+                        <form id="logoutForm" action="@Url.Action("SignOut", "Main")" method="post" style="display: none;">
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End Navbar -->

@@ -1,0 +1,33 @@
+﻿
+<title>Add Mission</title>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title"></div>
+        </div>
+        <form asp-controller="Task" asp-action="AddMission" method="post" >
+            <div class="card-body">
+                <div class="form-group">
+                    <div class="form-group form-inline">
+                        <div class="col-md-12 p-0">
+                            <input type="text" class="form-control input-full" id="FMissionTitle" name="FMissionTitle" placeholder="Mission Name" required />
+                        </div>
+                    </div>
+                    <div class="form-group form-inline">
+                        <div class="col-md-12 p-0">
+                            <input type="text" class="form-control input-full" id="FMissionDescription" name="FMissionDescription" placeholder="Mission Description" required />
+                        </div>
+                    </div>
+                    <div class="form-group form-inline">
+                        <div class="col-md-12 p-0">
+                            <input type="date" class="form-control input-full" id="FMissionDateTime" name="FMissionDateTime" placeholder="Mission Date" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-action">
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

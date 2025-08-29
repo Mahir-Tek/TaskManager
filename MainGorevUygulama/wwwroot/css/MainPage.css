@@ -1,0 +1,88 @@
+﻿
+
+.header-left {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+    .header-left i {
+        margin-right: 8px; /* ikon ile yazı arası boşluk */
+    }
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* yazı ve logout arası boşluk */
+}
+
+    .header-right span {
+        color: white;
+        font-weight: 600;
+    }
+
+    .header-right button {
+        padding: 6px 12px;
+        font-weight: bold;
+    }
+
+
+/* Ana içerik alanı - header altında düzgün konumlandırma */
+.container.mt-5 {
+    margin-top: 1rem !important;
+    padding-top: 1rem;
+}
+
+/* Kartlar */
+.task-card {
+    background: #fff;
+    border-left: 6px solid #4f46e5;
+    transition: all 0.4s ease;
+    min-width: 100%;
+    min-height: 160px;
+    padding: 30px;
+    font-size: 1.05rem;
+    border-radius: 14px;
+}
+
+    .task-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .task-card.completed {
+        background: #d1fae5;
+        border-left-color: #16a34a;
+        opacity: 0.95;
+        transform: scale(0.99);
+    }
+
+.task-container {
+    min-height: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f9fafb;
+    box-shadow: inset 0 0 12px rgba(0,0,0,0.08);
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, #4f46e5, #8b5cf6);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 28px;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+    .btn-gradient:hover {
+        transform: scale(1.05);
+        background: linear-gradient(to right, #8b5cf6, #4f46e5);
+        box-shadow: 0 10px 25px rgba(79,70,229,0.3);
+    }
+
+.empty-state {
+    color: #9ca3af;
+}

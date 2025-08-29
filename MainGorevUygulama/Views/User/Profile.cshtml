@@ -1,0 +1,26 @@
+﻿<title>Profile</title>
+<div class="page-wrapper">
+    <div class="profile-card">
+
+        <!-- Edit Profile Butonu -->
+        <a href="@Url.Action("EditProfile", "User")" class="edit-btn">Edit Profile</a>
+
+        <!-- Avatar -->
+        <img src="~/images/hiz_profile.jpg" alt="Avatar" class="profile-avatar" />
+
+        <!-- Kullanıcı Bilgileri -->
+        <div class="profile-info">
+            <h3>@ViewBag.Name @ViewBag.Surname</h3>
+            <p><strong>Email:</strong> @ViewBag.Email</p>
+        </div>
+
+        <!-- Delete Account Butonu (form ile) -->
+        <form asp-controller="User" asp-action="DeleteAccount" method="post">
+            <button type="submit" class="delete-btn">Delete Account</button>
+        </form>
+    </div>
+</div>
+<head>
+    <link rel="stylesheet" href="~/css/Profile.css" asp-append-version="true" />
+</head>
+

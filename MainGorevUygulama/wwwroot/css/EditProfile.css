@@ -1,0 +1,142 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    a width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.task-form {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .task-form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    }
+
+.form-title {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #4f46e5;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.task-form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+    .task-form label span {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #444;
+        font-size: 15px;
+    }
+
+.task-form input,
+.task-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+    .task-form input:focus,
+    .task-form textarea:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 12px rgba(79, 70, 229, 0.25);
+        outline: none;
+    }
+
+textarea {
+    min-height: 80px;
+}
+
+.task-form button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to right, #4f46e5, #8b5cf6);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+    .task-form button:hover {
+        background: linear-gradient(to right, #8b5cf6, #4f46e5);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+    }
+
+keyframes fadeIn {
+    0%
+
+{
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+media (max-width: 576px) {
+    .task-form
+
+{
+    padding: 25px 20px;
+}
+
+.form-title {
+    font-size: 22px;
+}
+
+.task-form input,
+.task-form textarea {
+    font-size: 14px;
+    padding: 12px;
+}
+
+.task-form button {
+    font-size: 15px;
+    padding: 14px;
+}
+
+}
+

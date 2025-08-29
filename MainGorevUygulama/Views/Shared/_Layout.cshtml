@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+          name="viewport" />
+    <link rel="icon"
+          href="~/favicon.ico"
+          type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="~/KaiAdmin/assets/js/plugin/webfont/webfont.min.js"></script>
+    <link rel="stylesheet" href="~/KaiAdmin/assets/css/fonts.min.css" />
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="~/KaiAdmin/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/KaiAdmin/assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="~/KaiAdmin/assets/css/kaiadmin.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar" data-background-color="dark">
+            <div class="sidebar-logo">
+                <!-- Logo Header -->
+                <div class="logo-header" data-background-color="dark">
+                    <a href="" class="logo">
+                        <center>
+                            <img src="~/KaiAdmin/assets/img/kaiadmin/logo_dark.png"
+                                 alt="navbar brand"
+                                 class="navbar-brand"
+                                 width="200" height="40" />                            
+                        </center>
+                    </a>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+                <!-- End Logo Header -->
+            </div>
+            @await Html.PartialAsync("_Menu")
+        </div>
+        <div class="main-panel">
+            <div class="main-header">
+                <div class="main-header-logo">
+                    <!-- Logo Header -->
+                    <div class="logo-header" data-background-color="dark">
+                        <a href="index.html" class="logo">
+                            <img src="~/KaiAdmin/assets/img/kaiadmin/logo_light.svg"
+                                 alt="navbar brand"
+                                 class="navbar-brand"
+                                 height="20" />
+                        </a>
+                        <div class="nav-toggle">
+                            <button class="btn btn-toggle toggle-sidebar">
+                                <i class="gg-menu-right"></i>
+                            </button>
+                            <button class="btn btn-toggle sidenav-toggler">
+                                <i class="gg-menu-left"></i>
+                            </button>
+                        </div>
+                        <button class="topbar-toggler more">
+                            <i class="gg-more-vertical-alt"></i>
+                        </button>
+                    </div>
+                    <!-- End Logo Header -->
+                </div>
+                @await Html.PartialAsync("_Topbar")
+            </div>
+            @*             <div id="content-area">
+            <!-- Content will be loaded here -->
+            </div> *@
+            <div class="container">
+                <div class="page-inner">
+                    @* @await Html.PartialAsync("_InnerMenu") *@
+                    <div class="page-category">@RenderBody()</div>
+                </div>
+            </div>
+
+            @await Html.PartialAsync("_Footer")
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="~/KaiAdmin/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="~/KaiAdmin/assets/js/core/popper.min.js"></script>
+    <script src="~/KaiAdmin/assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="~/KaiAdmin/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="~/KaiAdmin/assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="~/KaiAdmin/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="~/KaiAdmin/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="~/KaiAdmin/assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="~/KaiAdmin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="~/KaiAdmin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="~/KaiAdmin/assets/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Google Maps Plugin -->
+    <script src="~/KaiAdmin/assets/js/plugin/gmaps/gmaps.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="~/KaiAdmin/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="~/KaiAdmin/assets/js/kaiadmin.min.js"></script>    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

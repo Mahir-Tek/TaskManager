@@ -1,0 +1,98 @@
+﻿/* Genel stil */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.signup-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+    .signup-container h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #555;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .form-group input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 6px rgba(102, 126, 234, 0.3);
+            outline: none;
+        }
+
+.signup-btn {
+    width: 100%;
+    padding: 14px;
+    background: #667eea;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+    .signup-btn:hover {
+        background: #5a67d8;
+    }
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+    .login-link a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+/* Responsive */
+media (max-width: 480px) {
+    .signup-container
+
+{
+    padding: 30px 20px;
+}
+}
